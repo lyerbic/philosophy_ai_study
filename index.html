@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Philosophical Synthesis AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'base': '#f8f9fa',
+              'surface': '#ffffff',
+              'overlay': '#f1f3f5',
+              'muted': '#6c757d',
+              'subtle': '#dee2e6',
+              'text': '#212529',
+              'love': '#e11d48',
+              'gold': '#f59e0b',
+              'rose': '#fb7185',
+              'pine': '#14532d',
+              'foam': '#99f6e4',
+              'iris': '#818cf8',
+              'primary': '#0d6efd',
+              'primary-hover': '#0b5ed7',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .flashcard-container {
+        perspective: 1000px;
+      }
+      .flashcard {
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+      .flashcard.is-flipped {
+        transform: rotateY(180deg);
+      }
+      .flashcard-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+      .flashcard-back {
+        transform: rotateY(180deg);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "d3": "https://esm.sh/d3@7.9.0",
+    "recharts": "https://esm.sh/recharts@2.12.7"
+  }
+}
+</script>
+</head>
+  <body class="bg-gradient-to-br from-base to-[#e9ecef] text-text">
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel" data-type="module" src="/index.tsx"></script>
+  </body>
+</html>
